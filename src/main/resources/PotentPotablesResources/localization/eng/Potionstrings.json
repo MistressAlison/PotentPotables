@@ -72,7 +72,7 @@
   },
   "${ModID}:TenaciousTea": {
     "NAME": "Tenacious Tea",
-    "DESCRIPTIONS": [""]
+    "DESCRIPTIONS": ["Gain #b"," #yBlock. NL If this potion is unused, gain #b"," #yBlock at the start of each combat."]
   },
   "widepotions:${ModID}:TenaciousTea": {
     "NAME": "Towering Tenacious Tea"

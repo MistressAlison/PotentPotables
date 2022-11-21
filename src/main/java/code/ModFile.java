@@ -117,6 +117,7 @@ public class ModFile implements
         BaseMod.addPotion(MarvelousMilk.class, MarvelousMilk.liquid, MarvelousMilk.hybrid, MarvelousMilk.spots, MarvelousMilk.POTION_ID);
         BaseMod.addPotion(WitchWater.class, WitchWater.liquid, WitchWater.hybrid, WitchWater.spots, WitchWater.POTION_ID);
         BaseMod.addPotion(PoisedPerfume.class, PoisedPerfume.liquid, PoisedPerfume.hybrid, PoisedPerfume.spots, PoisedPerfume.POTION_ID);
+        BaseMod.addPotion(TenaciousTea.class, TenaciousTea.liquid, TenaciousTea.hybrid, TenaciousTea.spots, TenaciousTea.POTION_ID);
 
         if (Loader.isModLoaded("CardAugments")) {
             BaseMod.addPotion(ChimericCompound.class, ChimericCompound.liquid, ChimericCompound.hybrid, ChimericCompound.spots, ChimericCompound.POTION_ID);
