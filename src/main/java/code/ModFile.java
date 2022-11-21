@@ -135,6 +135,8 @@ public class ModFile implements
             //Complex Potions
             WidePotionsMod.whitelistComplexPotion(ProlificPotion.POTION_ID, new WideProlificPotion());
             //WidePotionsMod.whitelistComplexPotion(PatientPiggybank.POTION_ID, new WidePatientPiggybank());
+            WidePotionsMod.whitelistComplexPotion(PoisedPerfume.POTION_ID, new WidePoisedPerfume());
+            WidePotionsMod.whitelistComplexPotion(TenaciousTea.POTION_ID, new WideTenaciousTea());
 
             if (Loader.isModLoaded("CardAugments")) {
                 WidePotionsMod.whitelistSimplePotion(ChimericCompound.POTION_ID);
