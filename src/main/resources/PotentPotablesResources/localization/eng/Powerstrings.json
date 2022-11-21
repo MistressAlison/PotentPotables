@@ -1,0 +1,21 @@
+{
+  "${ModID}:DopingPower": {
+    "NAME": "Doping Draught",
+    "DESCRIPTIONS": [
+      "At the end of your turn, lose #b"," #yStrength."
+    ]
+  },
+  "${ModID}:ShinobiProwessPower": {
+    "NAME": "Shinobi Prowess",
+    "DESCRIPTIONS": [
+      "Whenever you play #b"," #ySkills, gain #b"," #yDexterity."
+    ]
+  },
+  "${ModID}:WitchPower": {
+    "NAME": "Witchery",
+    "DESCRIPTIONS": [
+      "This turn, whenever you deal unblocked attack damage, apply #b1 #yWeak.",
+      "For the next #b"," turns, whenever you deal unblocked attack damage, apply #b1 #yWeak."
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "${ModID}:ModConfigs": {
+    "TEXT": [
+      "Config stuff goes here if needed"
+    ],
+    "EXTRA_TEXT": [
+      "Potent Potables",
+      "Adds new Potions to the Spire."
+    ]
+  },
+  "${ModID}:Boost": {
+    "TEXT": [
+      "Boost",
+      "Choose a card to boost.",
+      "Choose "," cards to boost."
+    ]
+  }
+}

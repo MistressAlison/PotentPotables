@@ -1,0 +1,84 @@
+{
+  "${ModID}:Example": {
+    "NAME": "",
+    "DESCRIPTIONS": [""]
+  },
+  "widepotions:${ModID}:Example": {
+    "NAME": ""
+  },
+  "${ModID}:AttackAugmenter": {
+    "NAME": "Attack Augmenter",
+    "DESCRIPTIONS": ["Increase the damage of all Attack cards in your hand by #b"," this combat."]
+  },
+  "widepotions:${ModID}:AttackAugmenter": {
+    "NAME": "Ample Attack Augmenter"
+  },
+  "${ModID}:BlockBooster": {
+    "NAME": "Block Booster",
+    "DESCRIPTIONS": ["Increase the #yBlock of all #yBlock giving cards in your hand by #b"," this combat."]
+  },
+  "widepotions:${ModID}:BlockBooster": {
+    "NAME": "Big Block Booster"
+  },
+  "${ModID}:ChimericCompound": {
+    "NAME": "Chimeric Compound",
+    "DESCRIPTIONS": ["Apply a random Chimera Cards modifier to each card in your hand.","Apply #b"," random Chimera Cards modifiers to each card in your hand."]
+  },
+  "widepotions:${ModID}:ChimericCompound": {
+    "NAME": "Colossal Chimeric Compound"
+  },
+  "${ModID}:DopingDraught": {
+    "NAME": "Doping Draught",
+    "DESCRIPTIONS": ["Gain #b"," #yStrength. At the end of each turn, lose #b"," #yStrength."]
+  },
+  "widepotions:${ModID}:DopingDraught": {
+    "NAME": "Dominant Doping Draught"
+  },
+  "${ModID}:MarvelousMilk": {
+    "NAME": "Marvelous Milk",
+    "DESCRIPTIONS": ["Gain #b"," #yDexterity. NL Whenever you play #b"," #ySkills, gain #b"," additional #yDexterity."]
+  },
+  "widepotions:${ModID}:MarvelousMilk": {
+    "NAME": "Mega Marvelous Milk"
+  },
+  "${ModID}:PatientPiggybank": {
+    "NAME": "Patient Piggybank",
+    "DESCRIPTIONS": ["Gain #b"," #yGold. NL If this potion is unused, increase its gold gain by #b"," at the end of each combat."]
+  },
+  "widepotions:${ModID}:PatientPiggybank": {
+    "NAME": "Precious Patient Piggybank"
+  },
+  "${ModID}:PoisedPerfume": {
+    "NAME": "Poised Perfume",
+    "DESCRIPTIONS": ["Gain #b"," #yVigor. NL If this potion is unused, gain #b"," #yVigor at the start of each combat."]
+  },
+  "widepotions:${ModID}:PoisedPerfume": {
+    "NAME": "Powerful Poised Perfume"
+  },
+  "${ModID}:ProlificPotion": {
+    "NAME": "Prolific Potion",
+    "DESCRIPTIONS": ["Choose a card in your hand. Add #b"," copy of that card into your hand."," copies of that card into your hand."," NL If this potion is unused, gain a copy of it at the end of each combat.",
+      "Choose a card to copy."]
+  },
+  "widepotions:${ModID}:ProlificPotion": {
+    "NAME": "Plentiful Prolific Potion"
+  },
+  "${ModID}:SpeedySpirit": {
+    "NAME": "Speedy Spirit",
+    "DESCRIPTIONS": ["Draw #b"," cards. Next turn, draw #b"," cards."]
+  },
+  "widepotions:${ModID}:SpeedySpirit": {
+    "NAME": "Super Speedy Spirit"
+  },
+  "${ModID}:TenaciousTea": {
+    "NAME": "Tenacious Tea",
+    "DESCRIPTIONS": [""]
+  },
+  "widepotions:${ModID}:TenaciousTea": {
+    "NAME": "Towering Tenacious Tea"
+  },
+  "${ModID}:WitchWater": {
+    "NAME": "Witch Water",
+    "DESCRIPTIONS": ["This turn, whenever an Attack deals unblocked damage, apply #b1 #yWeak.","For #b"," turns, whenever an Attack deals unblocked damage, apply #b1 #yWeak."]
+  }
+}
