@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
@@ -37,7 +38,7 @@ public class PoisedPerfume extends CustomPotion implements PreBattlePotion {
 
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
-    public static final int EFFECT = 3;
+    public static final int EFFECT = 2;
 
     private static final TextureAtlas.AtlasRegion vfx = new TextureAtlas(Gdx.files.internal("powers/powers.atlas")).findRegion("128/blur");
     private static final Color vfxFrontColor = liquid.cpy().mul(0.9f, 0.9f, 0.9f, 0.45f);
@@ -58,7 +59,8 @@ public class PoisedPerfume extends CustomPotion implements PreBattlePotion {
 
     @Override
     public void use(AbstractCreature target) {
-        addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new VigorPower(Wiz.adp(), potency * 2)));
+        addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new StrengthPower(Wiz.adp(), potency)));
+        addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new LoseStrengthPower(Wiz.adp(), potency)));
     }
 
     // This is your potency.
@@ -70,10 +72,10 @@ public class PoisedPerfume extends CustomPotion implements PreBattlePotion {
     @Override
     public void initializeData() {
         potency = getPotency();
-        description = DESCRIPTIONS[0] + (potency * 2) + DESCRIPTIONS[1] + potency + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + (potency) + DESCRIPTIONS[1] + potency + DESCRIPTIONS[2];
         tips.clear();
         tips.add(new PowerTip(name, description));
-        tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.VIGOR.NAMES[0]), GameDictionary.keywords.get(GameDictionary.VIGOR.NAMES[0])));
+        tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.STRENGTH.NAMES[0]), GameDictionary.keywords.get(GameDictionary.STRENGTH.NAMES[0])));
     }
 
     @Override

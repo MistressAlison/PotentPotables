@@ -6,6 +6,7 @@ import basemod.interfaces.*;
 import code.potions.*;
 import code.potions.interfaces.PostBattlePotion;
 import code.potions.interfaces.PreBattlePotion;
+import code.powers.interfaces.PotionPotencyPower;
 import code.util.TexLoader;
 import code.util.Wiz;
 import com.badlogic.gdx.Gdx;
@@ -118,6 +119,8 @@ public class ModFile implements
         BaseMod.addPotion(WitchWater.class, WitchWater.liquid, WitchWater.hybrid, WitchWater.spots, WitchWater.POTION_ID);
         BaseMod.addPotion(PoisedPerfume.class, PoisedPerfume.liquid, PoisedPerfume.hybrid, PoisedPerfume.spots, PoisedPerfume.POTION_ID);
         BaseMod.addPotion(TenaciousTea.class, TenaciousTea.liquid, TenaciousTea.hybrid, TenaciousTea.spots, TenaciousTea.POTION_ID);
+        BaseMod.addPotion(BallisticBrew.class, BallisticBrew.liquid, BallisticBrew.hybrid, BallisticBrew.spots, BallisticBrew.POTION_ID);
+        BaseMod.addPotion(MagicManipulator.class, MagicManipulator.liquid, MagicManipulator.hybrid, MagicManipulator.spots, MagicManipulator.POTION_ID);
 
         if (Loader.isModLoaded("CardAugments")) {
             BaseMod.addPotion(ChimericCompound.class, ChimericCompound.liquid, ChimericCompound.hybrid, ChimericCompound.spots, ChimericCompound.POTION_ID);
@@ -131,10 +134,12 @@ public class ModFile implements
             WidePotionsMod.whitelistSimplePotion(DopingDraught.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(MarvelousMilk.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(WitchWater.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(BallisticBrew.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(MagicManipulator.POTION_ID);
 
             //Complex Potions
             WidePotionsMod.whitelistComplexPotion(ProlificPotion.POTION_ID, new WideProlificPotion());
-            //WidePotionsMod.whitelistComplexPotion(PatientPiggybank.POTION_ID, new WidePatientPiggybank());
+            WidePotionsMod.whitelistComplexPotion(PatientPiggybank.POTION_ID, new WidePatientPiggybank());
             WidePotionsMod.whitelistComplexPotion(PoisedPerfume.POTION_ID, new WidePoisedPerfume());
             WidePotionsMod.whitelistComplexPotion(TenaciousTea.POTION_ID, new WideTenaciousTea());
 
@@ -205,6 +210,9 @@ public class ModFile implements
                 ((PostBattlePotion) wp).postBattle();
             }
         }
+
+        Wiz.adp().powers.removeIf(p -> p instanceof PotionPotencyPower);
+        refreshPotions();
     }
 
     @Override
@@ -218,6 +226,15 @@ public class ModFile implements
             if (wp instanceof PreBattlePotion) {
                 ((PreBattlePotion) wp).preBattle();
             }
+        }
+    }
+
+    public static void refreshPotions() {
+        for (AbstractPotion p : Wiz.adp().potions) {
+            p.initializeData();
+        }
+        for (AbstractPotion wp : WidePotionSlot.Field.widepotions.get(Wiz.adp())) {
+            wp.initializeData();
         }
     }
 }

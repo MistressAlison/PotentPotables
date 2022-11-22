@@ -13,6 +13,13 @@
   "widepotions:${ModID}:AttackAugmenter": {
     "NAME": "Ample Attack Augmenter"
   },
+  "${ModID}:BallisticBrew": {
+    "NAME": "Ballistic Brew",
+    "DESCRIPTIONS": ["Your next attack deals #b","% more damage and ignores #yBlock."]
+  },
+  "widepotions:${ModID}:BallisticBrew": {
+    "NAME": "Big Ballistic Brew"
+  },
   "${ModID}:BlockBooster": {
     "NAME": "Block Booster",
     "DESCRIPTIONS": ["Increase the #yBlock of all #yBlock giving cards in your hand by #b"," this combat."]
@@ -34,6 +41,13 @@
   "widepotions:${ModID}:DopingDraught": {
     "NAME": "Dominant Doping Draught"
   },
+  "${ModID}:MagicManipulator": {
+    "NAME": "Magic Manipulator",
+    "DESCRIPTIONS": ["Increase the effectiveness of potions by #b","% this combat."]
+  },
+  "widepotions:${ModID}:MagicManipulator": {
+    "NAME": "Massive Magic Manipulator"
+  },
   "${ModID}:MarvelousMilk": {
     "NAME": "Marvelous Milk",
     "DESCRIPTIONS": ["Gain #b"," #yDexterity. NL Whenever you play #b"," #ySkills, gain #b"," additional #yDexterity."]
@@ -43,21 +57,21 @@
   },
   "${ModID}:PatientPiggybank": {
     "NAME": "Patient Piggybank",
-    "DESCRIPTIONS": ["Gain #b"," #yGold. NL If this potion is unused, increase its gold gain by #b"," at the end of each combat."]
+    "DESCRIPTIONS": ["Gain #b"," #yGold. NL While held, increase this potion's gold gain by #b"," at the end of each combat."]
   },
   "widepotions:${ModID}:PatientPiggybank": {
     "NAME": "Precious Patient Piggybank"
   },
   "${ModID}:PoisedPerfume": {
     "NAME": "Poised Perfume",
-    "DESCRIPTIONS": ["Gain #b"," #yVigor. NL If this potion is unused, gain #b"," #yVigor at the start of each combat."]
+    "DESCRIPTIONS": ["Gain #b"," temporary #yStrength. NL While held, gain #b"," temporary #yStrength at the start of each combat."]
   },
   "widepotions:${ModID}:PoisedPerfume": {
     "NAME": "Powerful Poised Perfume"
   },
   "${ModID}:ProlificPotion": {
     "NAME": "Prolific Potion",
-    "DESCRIPTIONS": ["Choose a card in your hand. Add #b"," copy of that card into your hand."," copies of that card into your hand."," NL If this potion is unused, gain a copy of it at the end of each combat.",
+    "DESCRIPTIONS": ["Choose a card in your hand. Add #b"," copy of that card into your hand."," copies of that card into your hand."," NL While held, gain a copy of this potion at the end of each combat.",
       "Choose a card to copy."]
   },
   "widepotions:${ModID}:ProlificPotion": {
@@ -72,7 +86,7 @@
   },
   "${ModID}:TenaciousTea": {
     "NAME": "Tenacious Tea",
-    "DESCRIPTIONS": ["Gain #b"," #yBlock. NL If this potion is unused, gain #b"," #yBlock at the start of each combat."]
+    "DESCRIPTIONS": ["Gain #b"," #yBlock. NL While held, gain #b"," #yBlock at the start of each combat."]
   },
   "widepotions:${ModID}:TenaciousTea": {
     "NAME": "Towering Tenacious Tea"
