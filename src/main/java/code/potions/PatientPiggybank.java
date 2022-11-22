@@ -4,6 +4,7 @@ import basemod.abstracts.CustomPotion;
 import basemod.abstracts.CustomSavable;
 import code.ModFile;
 import code.potions.interfaces.PostBattlePotion;
+import code.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
@@ -44,8 +45,14 @@ public class PatientPiggybank extends CustomPotion implements PostBattlePotion, 
 
     @Override
     public void use(AbstractCreature target) {
-        addToBot(new VFXAction(new RainingGoldEffect(goldAmount)));
-        addToBot(new GainGoldAction(goldAmount));
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            addToBot(new VFXAction(new RainingGoldEffect(goldAmount)));
+            addToBot(new GainGoldAction(goldAmount));
+        } else {
+            AbstractDungeon.effectList.add(new RainingGoldEffect(goldAmount));
+            Wiz.adp().gainGold(goldAmount);
+        }
+
     }
 
     // This is your potency.
