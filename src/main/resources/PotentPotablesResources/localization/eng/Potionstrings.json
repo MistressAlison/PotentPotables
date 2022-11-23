@@ -84,6 +84,13 @@
   "widepotions:${ModID}:ProlificPotion": {
     "NAME": "Plentiful Prolific Potion"
   },
+  "${ModID}:SanativeSolution": {
+    "NAME": "Sanative Solution",
+    "DESCRIPTIONS": ["Heal #b"," HP. NL While held, heal #b"," HP at the start of each combat."]
+  },
+  "widepotions:${ModID}:SanativeSolution": {
+    "NAME": "Superior Sanative Solution"
+  },
   "${ModID}:SpeedySpirit": {
     "NAME": "Speedy Spirit",
     "DESCRIPTIONS": ["Draw #b"," cards. Next turn, draw #b"," cards."]
