@@ -122,6 +122,7 @@ public class ModFile implements
         BaseMod.addPotion(BallisticBrew.class, BallisticBrew.liquid, BallisticBrew.hybrid, BallisticBrew.spots, BallisticBrew.POTION_ID);
         BaseMod.addPotion(MagicManipulator.class, MagicManipulator.liquid, MagicManipulator.hybrid, MagicManipulator.spots, MagicManipulator.POTION_ID);
         BaseMod.addPotion(MetallicMixture.class, MetallicMixture.liquid, MetallicMixture.hybrid, MetallicMixture.spots, MetallicMixture.POTION_ID);
+        BaseMod.addPotion(SanativeSolution.class, SanativeSolution.liquid, SanativeSolution.hybrid, SanativeSolution.spots, SanativeSolution.POTION_ID);
 
         if (Loader.isModLoaded("CardAugments")) {
             BaseMod.addPotion(ChimericCompound.class, ChimericCompound.liquid, ChimericCompound.hybrid, ChimericCompound.spots, ChimericCompound.POTION_ID);
@@ -140,10 +141,11 @@ public class ModFile implements
 
             //Complex Potions
             WidePotionsMod.whitelistComplexPotion(ProlificPotion.POTION_ID, new WideProlificPotion());
-            //WidePotionsMod.whitelistComplexPotion(PatientPiggybank.POTION_ID, new WidePatientPiggybank());
+            WidePotionsMod.whitelistComplexPotion(PatientPiggybank.POTION_ID, new WidePatientPiggybank());
             WidePotionsMod.whitelistComplexPotion(PoisedPerfume.POTION_ID, new WidePoisedPerfume());
             WidePotionsMod.whitelistComplexPotion(TenaciousTea.POTION_ID, new WideTenaciousTea());
             WidePotionsMod.whitelistComplexPotion(MetallicMixture.POTION_ID, new WideMetallicMixture());
+            WidePotionsMod.whitelistComplexPotion(SanativeSolution.POTION_ID, new WideSanativeSolution());
 
             if (Loader.isModLoaded("CardAugments")) {
                 WidePotionsMod.whitelistSimplePotion(ChimericCompound.POTION_ID);

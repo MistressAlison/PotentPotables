@@ -1,11 +1,12 @@
 package code.potions;
 
+import basemod.abstracts.CustomSavable;
 import code.potions.interfaces.PostBattlePotion;
 import com.evacipated.cardcrawl.mod.widepotions.potions.WidePotion;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 
-public class WidePatientPiggybank extends WidePotion implements PostBattlePotion {
+public class WidePatientPiggybank extends WidePotion implements PostBattlePotion, CustomSavable<Integer> {
     public int goldAmount;
 
     public WidePatientPiggybank() {
@@ -37,5 +38,18 @@ public class WidePatientPiggybank extends WidePotion implements PostBattlePotion
         flash();
         goldAmount += potency;
         initializeData();
+    }
+
+    @Override
+    public Integer onSave() {
+        return goldAmount;
+    }
+
+    @Override
+    public void onLoad(Integer integer) {
+        if (integer != null) {
+            this.goldAmount = integer;
+            initializeData();
+        }
     }
 }
