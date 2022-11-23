@@ -55,6 +55,13 @@
   "widepotions:${ModID}:MarvelousMilk": {
     "NAME": "Mega Marvelous Milk"
   },
+  "${ModID}:MetallicMixture": {
+    "NAME": "Metallic Mixture",
+    "DESCRIPTIONS": ["Prevent the next time you would lose HP.","Prevent the next #b"," times you would lose HP."," NL While held, whenever you would lose HP, lose #b"," less."]
+  },
+  "widepotions:${ModID}:MetallicMixture": {
+    "NAME": "Masterful Metallic Mixture"
+  },
   "${ModID}:PatientPiggybank": {
     "NAME": "Patient Piggybank",
     "DESCRIPTIONS": ["Gain #b"," #yGold. NL While held, increase this potion's gold gain by #b"," at the end of each combat."]
