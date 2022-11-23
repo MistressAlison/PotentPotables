@@ -27,6 +27,11 @@ public class WideMetallicMixture extends WidePotion implements OnLoseHPPotion {
     }
 
     @Override
+    public int getPotency(int ascensionLevel) {
+        return getPotion().getPotency(ascensionLevel) * 2;
+    }
+
+    @Override
     public int onLoseHP(int amount) {
         if (amount > 0) {
             flash();
