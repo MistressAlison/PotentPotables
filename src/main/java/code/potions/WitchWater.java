@@ -1,26 +1,17 @@
 package code.potions;
 
-import CardAugments.CardAugmentsMod;
-import basemod.abstracts.AbstractCardModifier;
 import basemod.abstracts.CustomPotion;
-import basemod.helpers.CardModifierManager;
 import code.ModFile;
 import code.powers.WitchPower;
 import code.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-
-import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 public class WitchWater extends CustomPotion {
 
@@ -28,8 +19,8 @@ public class WitchWater extends CustomPotion {
     public static final String POTION_ID = ModFile.makeID(WitchWater.class.getSimpleName());
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
-    public static final Color liquid = new Color(0x6e34eb55);
-    public static final Color hybrid = new Color();
+    public static final Color liquid = new Color(0x6e34ebff);
+    public static final Color hybrid = new Color(0x3e04cbff);
     public static final Color spots = null;
 
     public static final String NAME = potionStrings.NAME;
