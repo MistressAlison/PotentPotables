@@ -31,7 +31,7 @@ public class BallisticBrew extends CustomPotion {
     public static final int EFFECT = 100;
 
     public BallisticBrew() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.CARD, PotionColor.FIRE);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.CARD, PotionColor.FIRE);
         isThrown = false;
         targetRequired = false;
     }
