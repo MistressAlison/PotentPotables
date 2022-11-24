@@ -7,6 +7,7 @@ import code.potions.interfaces.PostBattlePotion;
 import code.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -38,7 +39,7 @@ public class ProlificPotion extends CustomPotion implements PostBattlePotion {
 
     @Override
     public void use(AbstractCreature target) {
-        addToBot(new BetterSelectCardsCenteredAction(Wiz.adp().hand.group, DESCRIPTIONS[4], l -> {
+        addToBot(new SelectCardsInHandAction(1, DESCRIPTIONS[4], l -> {
             for (AbstractCard card : l) {
                 Wiz.makeInHand(card, potency);
             }
