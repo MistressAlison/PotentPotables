@@ -31,7 +31,7 @@ public class SanativeSolution extends CustomPotion implements PreBattlePotion {
 
     public SanativeSolution() {
         super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.BOTTLE, PotionColor.FIRE);
-        isThrown = true;
+        isThrown = false;
         targetRequired = false;
         initializeData();
     }
