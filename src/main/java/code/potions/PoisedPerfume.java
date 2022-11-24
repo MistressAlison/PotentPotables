@@ -86,7 +86,8 @@ public class PoisedPerfume extends CustomPotion implements PreBattlePotion {
     @Override
     public void preBattle() {
         flash();
-        Wiz.applyToSelf(new VigorPower(Wiz.adp(), potency));
+        addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new StrengthPower(Wiz.adp(), potency)));
+        addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new LoseStrengthPower(Wiz.adp(), potency)));
     }
 
     @SpireOverride
