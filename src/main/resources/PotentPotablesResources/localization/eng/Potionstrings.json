@@ -8,17 +8,24 @@
   },
   "${ModID}:AttackAugmenter": {
     "NAME": "Attack Augmenter",
-    "DESCRIPTIONS": ["Increase the damage of all Attack cards in your hand by #b"," this combat."]
+    "DESCRIPTIONS": ["Increase the damage of all #yAttack cards in your hand by #b"," this combat."]
   },
   "widepotions:${ModID}:AttackAugmenter": {
     "NAME": "Ample Attack Augmenter"
   },
   "${ModID}:BallisticBrew": {
     "NAME": "Ballistic Brew",
-    "DESCRIPTIONS": ["Your next attack deals #b","% more damage and ignores #yBlock."]
+    "DESCRIPTIONS": ["Your next #yAttack deals #b","% more damage and ignores #yBlock."]
   },
   "widepotions:${ModID}:BallisticBrew": {
     "NAME": "Big Ballistic Brew"
+  },
+  "${ModID}:BanefulBlend": {
+    "NAME": "Baneful Blend",
+    "DESCRIPTIONS": ["Your #yAttack cards deal #b"," additional damage per debuff on their targets this combat."]
+  },
+  "widepotions:${ModID}:BanefulBlend": {
+    "NAME": "Brutal Baneful Blend"
   },
   "${ModID}:BlockBooster": {
     "NAME": "Block Booster",
@@ -107,6 +114,6 @@
   },
   "${ModID}:WitchWater": {
     "NAME": "Witch Water",
-    "DESCRIPTIONS": ["This turn, whenever an Attack deals unblocked damage, apply #b1 #yWeak.","For #b"," turns, whenever an Attack deals unblocked damage, apply #b1 #yWeak."]
+    "DESCRIPTIONS": ["This turn, whenever an #yAttack deals unblocked damage, apply #b1 #yWeak.","For #b"," turns, whenever an #yAttack deals unblocked damage, apply #b1 #yWeak."]
   }
 }

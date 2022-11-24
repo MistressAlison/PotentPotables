@@ -29,5 +29,11 @@
     "DESCRIPTIONS": [
       "Your potions are #b","% more effective this combat."
     ]
+  },
+  "${ModID}:BanefulPower": {
+    "NAME": "Baneful",
+    "DESCRIPTIONS": [
+      "Your Attacks deal #b"," additional damage per debuff on their targets."
+    ]
   }
 }
