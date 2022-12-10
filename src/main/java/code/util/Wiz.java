@@ -1,5 +1,7 @@
 package code.util;
 
+import code.actions.TimedVFXAction;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -13,11 +15,11 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import code.actions.TimedVFXAction;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
@@ -194,5 +196,13 @@ public class Wiz {
             return found.amount;
         }
         return 0;
+    }
+
+    public static ArrayList<AbstractPotion> getAllPotions() {
+        ArrayList<AbstractPotion> potions = new ArrayList<>(Wiz.adp().potions);
+        if (Loader.isModLoaded("widepotions")) {
+            //potions.addAll(WidePotionSlot.Field.widepotions.get(Wiz.adp()));
+        }
+        return potions;
     }
 }

@@ -1,25 +1,11 @@
 package code.powers;
 
 import code.ModFile;
-import code.damageMods.PiercingDamage;
-import code.potions.interfaces.PostBattlePotion;
 import code.powers.interfaces.PotionPotencyPower;
-import code.util.Wiz;
-import com.evacipated.cardcrawl.mod.stslib.damagemods.AbstractDamageModifier;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.DamageModApplyingPower;
-import com.evacipated.cardcrawl.mod.widepotions.potions.WidePotionSlot;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-
-import java.util.Collections;
-import java.util.List;
 
 public class PotencyPower extends AbstractPower implements PotionPotencyPower {
 

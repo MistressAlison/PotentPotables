@@ -7,19 +7,20 @@ import code.potions.*;
 import code.potions.interfaces.PostBattlePotion;
 import code.potions.interfaces.PreBattlePotion;
 import code.powers.interfaces.PotionPotencyPower;
+import code.util.CrossoverAddons;
 import code.util.TexLoader;
 import code.util.Wiz;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
-import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
-import com.evacipated.cardcrawl.mod.widepotions.potions.WidePotionSlot;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
@@ -125,33 +126,8 @@ public class ModFile implements
         BaseMod.addPotion(SanativeSolution.class, SanativeSolution.liquid, SanativeSolution.hybrid, SanativeSolution.spots, SanativeSolution.POTION_ID);
         BaseMod.addPotion(BanefulBlend.class, BanefulBlend.liquid, BanefulBlend.hybrid, BanefulBlend.spots, BanefulBlend.POTION_ID);
 
-        if (Loader.isModLoaded("CardAugments")) {
-            BaseMod.addPotion(ChimericCompound.class, ChimericCompound.liquid, ChimericCompound.hybrid, ChimericCompound.spots, ChimericCompound.POTION_ID);
-        }
-
         if (Loader.isModLoaded("widepotions")) {
-            //Simple Potions
-            WidePotionsMod.whitelistSimplePotion(AttackAugmenter.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(BlockBooster.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(SpeedySpirit.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(DopingDraught.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(MarvelousMilk.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(WitchWater.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(BallisticBrew.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(MagicManipulator.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(BanefulBlend.POTION_ID);
-
-            //Complex Potions
-            WidePotionsMod.whitelistComplexPotion(ProlificPotion.POTION_ID, new WideProlificPotion());
-            WidePotionsMod.whitelistComplexPotion(PatientPiggybank.POTION_ID, new WidePatientPiggybank());
-            WidePotionsMod.whitelistComplexPotion(PoisedPerfume.POTION_ID, new WidePoisedPerfume());
-            WidePotionsMod.whitelistComplexPotion(TenaciousTea.POTION_ID, new WideTenaciousTea());
-            WidePotionsMod.whitelistComplexPotion(MetallicMixture.POTION_ID, new WideMetallicMixture());
-            WidePotionsMod.whitelistComplexPotion(SanativeSolution.POTION_ID, new WideSanativeSolution());
-
-            if (Loader.isModLoaded("CardAugments")) {
-                WidePotionsMod.whitelistSimplePotion(ChimericCompound.POTION_ID);
-            }
+            CrossoverAddons.loadCrossoverContent();
         }
 
         uiStrings = CardCrawlGame.languagePack.getUIString(makeID("ModConfigs"));
@@ -163,57 +139,13 @@ public class ModFile implements
         // Load the Mod Badge
         Texture badgeTexture = TexLoader.getTexture(BADGE_IMAGE);
         BaseMod.registerModBadge(badgeTexture, EXTRA_TEXT[0], "Mistress Alison", EXTRA_TEXT[1], settingsPanel);
-
-        /*BaseMod.addSaveField(makeID("WidePiggySave"), new CustomSavable<ArrayList<Integer>>() {
-            @Override
-            public ArrayList<Integer> onSave() {
-                ArrayList<Integer> amounts = new ArrayList<>();
-                for (AbstractPotion p : Wiz.adp().potions) {
-                    if (p instanceof WidePatientPiggybank) {
-                        amounts.add(((WidePatientPiggybank) p).goldAmount);
-                    }
-                }
-                for (AbstractPotion wp : WidePotionSlot.Field.widepotions.get(Wiz.adp())) {
-                    if (wp instanceof WidePatientPiggybank) {
-                        amounts.add(((WidePatientPiggybank) wp).goldAmount);
-                    }
-                }
-                return amounts;
-            }
-
-            @Override
-            public void onLoad(ArrayList<Integer> integers) {
-                if (integers != null) {
-                    int i = 0;
-                    for (AbstractPotion p : Wiz.adp().potions) {
-                        if (p instanceof WidePatientPiggybank && i < integers.size()) {
-                            ((WidePatientPiggybank) p).goldAmount = integers.get(i);
-                            p.initializeData();
-                            i++;
-                        }
-                    }
-                    for (AbstractPotion wp : WidePotionSlot.Field.widepotions.get(Wiz.adp())) {
-                        if (wp instanceof WidePatientPiggybank && i < integers.size()) {
-                            ((WidePatientPiggybank) wp).goldAmount = integers.get(i);
-                            wp.initializeData();
-                            i++;
-                        }
-                    }
-                }
-            }
-        });*/
     }
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        for (AbstractPotion p : Wiz.adp().potions) {
+        for (AbstractPotion p : Wiz.getAllPotions()) {
             if (p instanceof PostBattlePotion) {
                 ((PostBattlePotion) p).postBattle();
-            }
-        }
-        for (AbstractPotion wp : WidePotionSlot.Field.widepotions.get(Wiz.adp())) {
-            if (wp instanceof PostBattlePotion) {
-                ((PostBattlePotion) wp).postBattle();
             }
         }
 
@@ -223,24 +155,16 @@ public class ModFile implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        for (AbstractPotion p : Wiz.adp().potions) {
+        for (AbstractPotion p : Wiz.getAllPotions()) {
             if (p instanceof PreBattlePotion) {
                 ((PreBattlePotion) p).preBattle();
-            }
-        }
-        for (AbstractPotion wp : WidePotionSlot.Field.widepotions.get(Wiz.adp())) {
-            if (wp instanceof PreBattlePotion) {
-                ((PreBattlePotion) wp).preBattle();
             }
         }
     }
 
     public static void refreshPotions() {
-        for (AbstractPotion p : Wiz.adp().potions) {
+        for (AbstractPotion p : Wiz.getAllPotions()) {
             p.initializeData();
-        }
-        for (AbstractPotion wp : WidePotionSlot.Field.widepotions.get(Wiz.adp())) {
-            wp.initializeData();
         }
     }
 }

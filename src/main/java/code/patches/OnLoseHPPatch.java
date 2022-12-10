@@ -1,9 +1,7 @@
 package code.patches;
 
 import code.potions.interfaces.OnLoseHPPotion;
-import code.potions.interfaces.PostBattlePotion;
 import code.util.Wiz;
-import com.evacipated.cardcrawl.mod.widepotions.potions.WidePotionSlot;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,14 +13,9 @@ public class OnLoseHPPatch {
     public static class PotionShenanigans {
         @SpireInsertPatch(locator = Locator.class, localvars = {"damageAmount"})
         public static void plz(AbstractPlayer __instance, DamageInfo info, @ByRef int[] damageAmount) {
-            for (AbstractPotion p : Wiz.adp().potions) {
+            for (AbstractPotion p : Wiz.getAllPotions()) {
                 if (p instanceof OnLoseHPPotion) {
                     damageAmount[0] = ((OnLoseHPPotion) p).onLoseHP(damageAmount[0]);
-                }
-            }
-            for (AbstractPotion wp : WidePotionSlot.Field.widepotions.get(Wiz.adp())) {
-                if (wp instanceof OnLoseHPPotion) {
-                    damageAmount[0] = ((OnLoseHPPotion) wp).onLoseHP(damageAmount[0]);
                 }
             }
         }

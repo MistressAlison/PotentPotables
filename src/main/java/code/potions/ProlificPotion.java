@@ -6,6 +6,7 @@ import code.actions.BetterSelectCardsCenteredAction;
 import code.potions.interfaces.PostBattlePotion;
 import code.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
@@ -80,11 +81,28 @@ public class ProlificPotion extends CustomPotion implements PostBattlePotion {
         AbstractDungeon.getCurrRoom().addPotionToRewards(makeCopy());
     }
 
-    @SpireOverride
-    protected void updateEffect() {
+    public void updateColors() {
         this.liquidColor.r = (MathUtils.cosDeg((float)(System.currentTimeMillis() / 10L % 360L)) + 1.25F) / 2.3F;
         this.liquidColor.g = (MathUtils.cosDeg((float)((System.currentTimeMillis() + 1000L) / 10L % 360L)) + 1.25F) / 2.3F;
         this.liquidColor.b = (MathUtils.cosDeg((float)((System.currentTimeMillis() + 2000L) / 10L % 360L)) + 1.25F) / 2.3F;
         this.liquidColor.a = 1.0F;
+    }
+
+    @Override
+    public void render(SpriteBatch sb) {
+        updateColors();
+        super.render(sb);
+    }
+
+    @Override
+    public void labRender(SpriteBatch sb) {
+        updateColors();
+        super.labRender(sb);
+    }
+
+    @Override
+    public void shopRender(SpriteBatch sb) {
+        updateColors();
+        super.shopRender(sb);
     }
 }

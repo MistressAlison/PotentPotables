@@ -3,15 +3,11 @@ package code.potions;
 import basemod.abstracts.CustomPotion;
 import code.ModFile;
 import code.potions.interfaces.PreBattlePotion;
-import code.powers.DopingPower;
 import code.util.Wiz;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -23,7 +19,6 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 
 public class PoisedPerfume extends CustomPotion implements PreBattlePotion {
@@ -90,13 +85,9 @@ public class PoisedPerfume extends CustomPotion implements PreBattlePotion {
         addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new LoseStrengthPower(Wiz.adp(), potency)));
     }
 
-    @SpireOverride
-    protected void updateEffect() {
-        bob.update();
-    }
-
     @Override
     public void render(SpriteBatch sb) {
+        bob.update();
         renderVfxBehind(sb);
         super.render(sb);
         renderVfxInfront(sb);
@@ -104,6 +95,7 @@ public class PoisedPerfume extends CustomPotion implements PreBattlePotion {
 
     @Override
     public void labRender(SpriteBatch sb) {
+        bob.update();
         renderVfxBehind(sb);
         super.labRender(sb);
         renderVfxInfront(sb);
@@ -111,6 +103,7 @@ public class PoisedPerfume extends CustomPotion implements PreBattlePotion {
 
     @Override
     public void shopRender(SpriteBatch sb) {
+        bob.update();
         renderVfxBehind(sb);
         super.shopRender(sb);
         renderVfxInfront(sb);

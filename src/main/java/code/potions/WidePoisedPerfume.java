@@ -1,7 +1,5 @@
 package code.potions;
 
-import basemod.abstracts.CustomPotion;
-import code.ModFile;
 import code.potions.interfaces.PreBattlePotion;
 import code.util.Wiz;
 import com.badlogic.gdx.Gdx;
@@ -9,17 +7,12 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.widepotions.potions.WidePotion;
-import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
-import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.TipHelper;
-import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 
 public class WidePoisedPerfume extends WidePotion implements PreBattlePotion {
@@ -47,7 +40,8 @@ public class WidePoisedPerfume extends WidePotion implements PreBattlePotion {
 
     @Override
     public void use(AbstractCreature target) {
-        addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new VigorPower(Wiz.adp(), potency * 2)));
+        addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new StrengthPower(Wiz.adp(), potency)));
+        addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new LoseStrengthPower(Wiz.adp(), potency)));
     }
 
     @Override
@@ -58,16 +52,13 @@ public class WidePoisedPerfume extends WidePotion implements PreBattlePotion {
     @Override
     public void preBattle() {
         flash();
-        Wiz.applyToSelf(new VigorPower(Wiz.adp(), potency));
-    }
-
-    @SpireOverride
-    protected void updateEffect() {
-        bob.update();
+        addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new StrengthPower(Wiz.adp(), potency)));
+        addToBot(new ApplyPowerAction(Wiz.adp(), Wiz.adp(), new LoseStrengthPower(Wiz.adp(), potency)));
     }
 
     @Override
     public void render(SpriteBatch sb) {
+        bob.update();
         renderVfxBehind(sb);
         super.render(sb);
         renderVfxInfront(sb);
@@ -75,6 +66,7 @@ public class WidePoisedPerfume extends WidePotion implements PreBattlePotion {
 
     @Override
     public void labRender(SpriteBatch sb) {
+        bob.update();
         renderVfxBehind(sb);
         super.labRender(sb);
         renderVfxInfront(sb);
@@ -82,6 +74,7 @@ public class WidePoisedPerfume extends WidePotion implements PreBattlePotion {
 
     @Override
     public void shopRender(SpriteBatch sb) {
+        bob.update();
         renderVfxBehind(sb);
         super.shopRender(sb);
         renderVfxInfront(sb);
