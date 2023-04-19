@@ -23,6 +23,7 @@ public class CrossoverAddons {
             WidePotionsMod.whitelistSimplePotion(MagicManipulator.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(BanefulBlend.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(InfernalInfusion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(ExoticElixir.POTION_ID);
 
             //Complex Potions
             //WidePotionsMod.whitelistComplexPotion(ProlificPotion.POTION_ID, new WideProlificPotion());

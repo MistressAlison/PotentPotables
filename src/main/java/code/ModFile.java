@@ -127,6 +127,7 @@ public class ModFile implements
         BaseMod.addPotion(VolcanicVapors.class, VolcanicVapors.liquid, VolcanicVapors.hybrid, VolcanicVapors.spots, VolcanicVapors.POTION_ID);
         BaseMod.addPotion(MiraculousMedley.class, MiraculousMedley.liquid, MiraculousMedley.hybrid, MiraculousMedley.spots, MiraculousMedley.POTION_ID);
         BaseMod.addPotion(InfernalInfusion.class, InfernalInfusion.liquid, InfernalInfusion.hybrid, InfernalInfusion.spots, InfernalInfusion.POTION_ID);
+        BaseMod.addPotion(ExoticElixir.class, ExoticElixir.liquid, ExoticElixir.hybrid, ExoticElixir.spots, ExoticElixir.POTION_ID);
 
         CrossoverAddons.loadCrossoverContent();
 

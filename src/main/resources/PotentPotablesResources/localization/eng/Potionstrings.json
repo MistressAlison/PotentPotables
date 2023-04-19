@@ -48,6 +48,13 @@
   "widepotions:${ModID}:DopingDraught": {
     "NAME": "Dominant Doping Draught"
   },
+  "${ModID}:ExoticElixir": {
+    "NAME": "Exotic Elixir",
+    "DESCRIPTIONS": ["#yExhaust ALL your #yStatus and #yCurse cards. Heal #b"," HP for each card #yExhausted this way."]
+  },
+  "widepotions:${ModID}:ExoticElixir": {
+    "NAME": "Excellent Exotic Elixir"
+  },
   "${ModID}:InfernalInfusion": {
     "NAME": "Infernal Infusion",
     "DESCRIPTIONS": ["#yAttacks deal double damage this turn.","#yAttacks deal double damage for #b"," turns."]
