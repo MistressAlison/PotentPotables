@@ -31,6 +31,7 @@ public class CrossoverAddons {
             WidePotionsMod.whitelistComplexPotion(MetallicMixture.POTION_ID, new WideMetallicMixture());
             WidePotionsMod.whitelistComplexPotion(SanativeSolution.POTION_ID, new WideSanativeSolution());
             WidePotionsMod.whitelistComplexPotion(VolcanicVapors.POTION_ID, new WideVolcanicVapors());
+            WidePotionsMod.whitelistComplexPotion(MiraculousMedley.POTION_ID, new WideMiraculousMedley());
 
             if (Loader.isModLoaded("CardAugments")) {
                 WidePotionsMod.whitelistSimplePotion(ChimericCompound.POTION_ID);

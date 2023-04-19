@@ -13,7 +13,6 @@ import code.util.Wiz;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
-import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -126,6 +125,7 @@ public class ModFile implements
         BaseMod.addPotion(SanativeSolution.class, SanativeSolution.liquid, SanativeSolution.hybrid, SanativeSolution.spots, SanativeSolution.POTION_ID);
         BaseMod.addPotion(BanefulBlend.class, BanefulBlend.liquid, BanefulBlend.hybrid, BanefulBlend.spots, BanefulBlend.POTION_ID);
         BaseMod.addPotion(VolcanicVapors.class, VolcanicVapors.liquid, VolcanicVapors.hybrid, VolcanicVapors.spots, VolcanicVapors.POTION_ID);
+        BaseMod.addPotion(MiraculousMedley.class, MiraculousMedley.liquid, MiraculousMedley.hybrid, MiraculousMedley.spots, MiraculousMedley.POTION_ID);
 
         CrossoverAddons.loadCrossoverContent();
 

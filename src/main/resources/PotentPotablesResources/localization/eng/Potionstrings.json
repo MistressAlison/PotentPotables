@@ -69,6 +69,13 @@
   "widepotions:${ModID}:MetallicMixture": {
     "NAME": "Masterful Metallic Mixture"
   },
+  "${ModID}:MiraculousMedley": {
+    "NAME": "Miraculous Medley",
+    "DESCRIPTIONS": ["Gain #b"," #yEnergy. NL While held, add #b"," #yMiracle into your hand at the start of each combat."," #yMiracles into your hand at the start of each combat."]
+  },
+  "widepotions:${ModID}:MiraculousMedley": {
+    "NAME": "Mighty Miraculous Medley"
+  },
   "${ModID}:PatientPiggybank": {
     "NAME": "Patient Piggybank",
     "DESCRIPTIONS": ["Gain #b"," #yGold. NL While held, increase this potion's gold gain by #b"," at the end of each combat."]
