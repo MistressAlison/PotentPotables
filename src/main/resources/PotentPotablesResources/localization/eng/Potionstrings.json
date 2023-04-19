@@ -115,5 +115,15 @@
   "${ModID}:WitchWater": {
     "NAME": "Witch Water",
     "DESCRIPTIONS": ["This turn, whenever an #yAttack deals unblocked damage, apply #b1 #yWeak.","For #b"," turns, whenever an #yAttack deals unblocked damage, apply #b1 #yWeak."]
+  },
+  "widepotions:${ModID}:WitchWater": {
+    "NAME": "Wide Witch Water"
+  },
+  "${ModID}:VolcanicVapors": {
+    "NAME": "Volcanic Vapors",
+    "DESCRIPTIONS": ["Deal #b"," damage to ALL enemies. NL While held, deal #b"," to ALL enemies at the start of each combat."]
+  },
+  "widepotions:${ModID}:VolcanicVapors": {
+    "NAME": "Violent Volcanic Vapors"
   }
 }

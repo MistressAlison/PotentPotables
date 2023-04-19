@@ -125,10 +125,9 @@ public class ModFile implements
         BaseMod.addPotion(MetallicMixture.class, MetallicMixture.liquid, MetallicMixture.hybrid, MetallicMixture.spots, MetallicMixture.POTION_ID);
         BaseMod.addPotion(SanativeSolution.class, SanativeSolution.liquid, SanativeSolution.hybrid, SanativeSolution.spots, SanativeSolution.POTION_ID);
         BaseMod.addPotion(BanefulBlend.class, BanefulBlend.liquid, BanefulBlend.hybrid, BanefulBlend.spots, BanefulBlend.POTION_ID);
+        BaseMod.addPotion(VolcanicVapors.class, VolcanicVapors.liquid, VolcanicVapors.hybrid, VolcanicVapors.spots, VolcanicVapors.POTION_ID);
 
-        if (Loader.isModLoaded("widepotions")) {
-            CrossoverAddons.loadCrossoverContent();
-        }
+        CrossoverAddons.loadCrossoverContent();
 
         uiStrings = CardCrawlGame.languagePack.getUIString(makeID("ModConfigs"));
         EXTRA_TEXT = uiStrings.EXTRA_TEXT;
