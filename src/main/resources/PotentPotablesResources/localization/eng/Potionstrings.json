@@ -48,6 +48,13 @@
   "widepotions:${ModID}:DopingDraught": {
     "NAME": "Dominant Doping Draught"
   },
+  "${ModID}:InfernalInfusion": {
+    "NAME": "Infernal Infusion",
+    "DESCRIPTIONS": ["#yAttacks deal double damage this turn.","#yAttacks deal double damage for #b"," turns."]
+  },
+  "widepotions:${ModID}:InfernalInfusion": {
+    "NAME": "Intense Infernal Infusion"
+  },
   "${ModID}:MagicManipulator": {
     "NAME": "Magic Manipulator",
     "DESCRIPTIONS": ["Increase the effectiveness of potions by #b","% this combat."]
