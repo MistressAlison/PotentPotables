@@ -49,7 +49,7 @@ public class VolcanicVapors extends CustomPotion implements PreBattlePotion {
             }
         }
         this.addToBot(new WaitAction(0.5F));
-        this.addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(this.potency, true), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(this.potency * USE_MULTI, true), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
     }
 
     // This is your potency.
