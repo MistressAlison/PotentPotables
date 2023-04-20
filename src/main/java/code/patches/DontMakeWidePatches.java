@@ -8,7 +8,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 public class DontMakeWidePatches {
     public static boolean skipNextPotion = false;
 
-    @SpirePatch2(clz = WideRewards.class, method = "Prefix")
+    @SpirePatch2(clz = WideRewards.class, method = "Prefix", requiredModId = "widepotions", optional = true)
     public static class SkipThisPotion {
         @SpirePrefixPatch
         public static SpireReturn<?> plz() {

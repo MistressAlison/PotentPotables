@@ -13,6 +13,7 @@ import code.util.Wiz;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -130,7 +131,9 @@ public class ModFile implements
         BaseMod.addPotion(ExoticElixir.class, ExoticElixir.liquid, ExoticElixir.hybrid, ExoticElixir.spots, ExoticElixir.POTION_ID);
         BaseMod.addPotion(LivelyLiquor.class, LivelyLiquor.liquid, LivelyLiquor.hybrid, LivelyLiquor.spots, LivelyLiquor.POTION_ID);
 
-        CrossoverAddons.loadCrossoverContent();
+        if (Loader.isModLoaded("widepotions")) {
+            CrossoverAddons.loadCrossoverContent();
+        }
 
         uiStrings = CardCrawlGame.languagePack.getUIString(makeID("ModConfigs"));
         EXTRA_TEXT = uiStrings.EXTRA_TEXT;
