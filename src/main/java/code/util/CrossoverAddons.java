@@ -3,7 +3,11 @@ package code.util;
 import basemod.BaseMod;
 import code.potions.*;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
+import com.evacipated.cardcrawl.mod.widepotions.potions.WidePotionSlot;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
+
+import java.util.List;
 
 public class CrossoverAddons {
     public static void loadCrossoverContent() {
@@ -27,9 +31,9 @@ public class CrossoverAddons {
             WidePotionsMod.whitelistSimplePotion(LivelyLiquor.POTION_ID);
 
             //Complex Potions
-            //WidePotionsMod.whitelistComplexPotion(ProlificPotion.POTION_ID, new WideProlificPotion());
+            WidePotionsMod.whitelistComplexPotion(ProlificPotion.POTION_ID, new WideProlificPotion());
             WidePotionsMod.whitelistComplexPotion(PatientPiggybank.POTION_ID, new WidePatientPiggybank());
-            //WidePotionsMod.whitelistComplexPotion(PoisedPerfume.POTION_ID, new WidePoisedPerfume());
+            WidePotionsMod.whitelistComplexPotion(PoisedPerfume.POTION_ID, new WidePoisedPerfume());
             WidePotionsMod.whitelistComplexPotion(TenaciousTea.POTION_ID, new WideTenaciousTea());
             WidePotionsMod.whitelistComplexPotion(MetallicMixture.POTION_ID, new WideMetallicMixture());
             WidePotionsMod.whitelistComplexPotion(SanativeSolution.POTION_ID, new WideSanativeSolution());
@@ -40,5 +44,9 @@ public class CrossoverAddons {
                 WidePotionsMod.whitelistSimplePotion(ChimericCompound.POTION_ID);
             }
         }
+    }
+
+    public static List<AbstractPotion> getWidePotions() {
+        return WidePotionSlot.Field.widepotions.get(Wiz.adp());
     }
 }

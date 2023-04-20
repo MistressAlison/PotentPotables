@@ -3,6 +3,7 @@ package code.potions;
 import basemod.abstracts.CustomPotion;
 import code.ModFile;
 import code.actions.BetterSelectCardsCenteredAction;
+import code.patches.DontMakeWidePatches;
 import code.potions.interfaces.PostBattlePotion;
 import code.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
@@ -78,6 +79,7 @@ public class ProlificPotion extends CustomPotion implements PostBattlePotion {
     @Override
     public void postBattle() {
         flash();
+        DontMakeWidePatches.skipNextPotion = true;
         AbstractDungeon.getCurrRoom().addPotionToRewards(makeCopy());
     }
 
