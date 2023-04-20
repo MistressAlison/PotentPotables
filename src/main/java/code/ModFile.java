@@ -128,6 +128,7 @@ public class ModFile implements
         BaseMod.addPotion(MiraculousMedley.class, MiraculousMedley.liquid, MiraculousMedley.hybrid, MiraculousMedley.spots, MiraculousMedley.POTION_ID);
         BaseMod.addPotion(InfernalInfusion.class, InfernalInfusion.liquid, InfernalInfusion.hybrid, InfernalInfusion.spots, InfernalInfusion.POTION_ID);
         BaseMod.addPotion(ExoticElixir.class, ExoticElixir.liquid, ExoticElixir.hybrid, ExoticElixir.spots, ExoticElixir.POTION_ID);
+        BaseMod.addPotion(LivelyLiquor.class, LivelyLiquor.liquid, LivelyLiquor.hybrid, LivelyLiquor.spots, LivelyLiquor.POTION_ID);
 
         CrossoverAddons.loadCrossoverContent();
 

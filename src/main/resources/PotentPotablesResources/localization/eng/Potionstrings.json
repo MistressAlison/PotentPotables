@@ -62,6 +62,13 @@
   "widepotions:${ModID}:InfernalInfusion": {
     "NAME": "Intense Infernal Infusion"
   },
+  "${ModID}:LivelyLiquor": {
+    "NAME": "Lively Liquor",
+    "DESCRIPTIONS": ["Reduce the cost of #b"," random cards in your hand by #b1 this combat."]
+  },
+  "widepotions:${ModID}:LivelyLiquor": {
+    "NAME": "Large Lively Liquor"
+  },
   "${ModID}:MagicManipulator": {
     "NAME": "Magic Manipulator",
     "DESCRIPTIONS": ["Increase the effectiveness of potions by #b","% this combat."]
