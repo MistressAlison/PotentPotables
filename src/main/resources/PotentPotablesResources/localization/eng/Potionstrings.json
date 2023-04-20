@@ -32,7 +32,7 @@
     "DESCRIPTIONS": ["Increase the #yBlock of all #yBlock giving cards in your hand by #b"," this combat."]
   },
   "widepotions:${ModID}:BlockBooster": {
-    "NAME": "Big Block Booster"
+    "NAME": "Bold Block Booster"
   },
   "${ModID}:ChimericCompound": {
     "NAME": "Chimeric Compound",
