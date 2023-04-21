@@ -99,7 +99,7 @@
   },
   "${ModID}:PatientPiggybank": {
     "NAME": "Patient Piggybank",
-    "DESCRIPTIONS": ["Gain #b"," #yGold. NL While held, increase this potion's gold gain by #b"," at the end of each combat."]
+    "DESCRIPTIONS": ["Gain #b"," #yGold. NL While held, increase this potion's #yGold gain by #b"," at the end of each combat."]
   },
   "widepotions:${ModID}:PatientPiggybank": {
     "NAME": "Precious Patient Piggybank"
