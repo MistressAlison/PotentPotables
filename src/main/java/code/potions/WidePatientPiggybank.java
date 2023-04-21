@@ -2,9 +2,16 @@ package code.potions;
 
 import basemod.abstracts.CustomSavable;
 import code.potions.interfaces.PostBattlePotion;
+import code.util.Wiz;
 import com.evacipated.cardcrawl.mod.widepotions.potions.WidePotion;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 
 public class WidePatientPiggybank extends WidePotion implements PostBattlePotion, CustomSavable<Integer> {
     public int goldAmount;
@@ -15,6 +22,17 @@ public class WidePatientPiggybank extends WidePotion implements PostBattlePotion
         targetRequired = false;
         goldAmount = 30;
         initializeData();
+    }
+
+    @Override
+    public void use(AbstractCreature target) {
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            addToBot(new VFXAction(new RainingGoldEffect(goldAmount)));
+            addToBot(new GainGoldAction(goldAmount));
+        } else {
+            AbstractDungeon.effectList.add(new RainingGoldEffect(goldAmount));
+            Wiz.adp().gainGold(goldAmount);
+        }
     }
 
     @Override
