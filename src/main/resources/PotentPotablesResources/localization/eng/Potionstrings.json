@@ -149,7 +149,7 @@
   },
   "${ModID}:VolcanicVapors": {
     "NAME": "Volcanic Vapors",
-    "DESCRIPTIONS": ["Deal #b"," damage to ALL enemies. NL While held, deal #b"," to ALL enemies at the start of each combat."]
+    "DESCRIPTIONS": ["Deal #b"," damage to ALL enemies. NL While held, deal #b"," damage to ALL enemies at the start of each combat."]
   },
   "widepotions:${ModID}:VolcanicVapors": {
     "NAME": "Violent Volcanic Vapors"
