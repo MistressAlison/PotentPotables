@@ -49,7 +49,7 @@ public class ChimericCompound extends CustomPotion {
                 CardCrawlGame.sound.play("GHOST_ORB_IGNITE_1", 0.3F);
                 for (AbstractCard card : Wiz.adp().hand.group) {
                     for (int i = 0 ; i < potency ; i++) {
-                        ArrayList<AbstractCardModifier> mods = CardAugmentsMod.modMap.values().stream().filter(mon -> mon.validCard(card)).collect(Collectors.toCollection(ArrayList::new));
+                        ArrayList<AbstractCardModifier> mods = CardAugmentsMod.modMap.values().stream().filter(mon -> mon.canApplyTo(card)).collect(Collectors.toCollection(ArrayList::new));
                         if (!mods.isEmpty()) {
                             CardModifierManager.addModifier(card, mods.get(AbstractDungeon.potionRng.random(mods.size()-1)).makeCopy());
                             card.applyPowers();
