@@ -2,7 +2,7 @@
   "modid": "${ModID}",
   "name": "${project.name}",
   "author_list": [
-    "Mistress Alison"
+    "Mistress Autumn"
   ],
   "description": "${project.description}",
   "version": "${project.version}",

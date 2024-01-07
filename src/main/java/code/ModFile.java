@@ -143,7 +143,7 @@ public class ModFile implements
 
         // Load the Mod Badge
         Texture badgeTexture = TexLoader.getTexture(BADGE_IMAGE);
-        BaseMod.registerModBadge(badgeTexture, EXTRA_TEXT[0], "Mistress Alison", EXTRA_TEXT[1], settingsPanel);
+        BaseMod.registerModBadge(badgeTexture, EXTRA_TEXT[0], "Mistress Autumn", EXTRA_TEXT[1], settingsPanel);
     }
 
     @Override
