@@ -7,7 +7,7 @@ import code.potions.*;
 import code.potions.interfaces.PostBattlePotion;
 import code.potions.interfaces.PreBattlePotion;
 import code.powers.interfaces.PotionPotencyPower;
-import code.util.CrossoverAddons;
+import code.util.WidePotionLoader;
 import code.util.TexLoader;
 import code.util.Wiz;
 import com.badlogic.gdx.Gdx;
@@ -131,8 +131,12 @@ public class ModFile implements
         BaseMod.addPotion(ExoticElixir.class, ExoticElixir.liquid, ExoticElixir.hybrid, ExoticElixir.spots, ExoticElixir.POTION_ID);
         BaseMod.addPotion(LivelyLiquor.class, LivelyLiquor.liquid, LivelyLiquor.hybrid, LivelyLiquor.spots, LivelyLiquor.POTION_ID);
 
+        if (Loader.isModLoaded("CardAugments")) {
+            BaseMod.addPotion(ChimericCompound.class, ChimericCompound.liquid, ChimericCompound.hybrid, ChimericCompound.spots, ChimericCompound.POTION_ID);
+        }
+
         if (Loader.isModLoaded("widepotions")) {
-            CrossoverAddons.loadCrossoverContent();
+            WidePotionLoader.loadCrossoverContent();
         }
 
         uiStrings = CardCrawlGame.languagePack.getUIString(makeID("ModConfigs"));

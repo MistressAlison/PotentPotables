@@ -1,6 +1,5 @@
 package code.util;
 
-import basemod.BaseMod;
 import code.potions.*;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.mod.widepotions.potions.WidePotionSlot;
@@ -9,7 +8,7 @@ import com.megacrit.cardcrawl.potions.AbstractPotion;
 
 import java.util.List;
 
-public class CrossoverAddons {
+public class WidePotionLoader {
     public static void loadCrossoverContent() {
         //Simple Potions
         WidePotionsMod.whitelistSimplePotion(AttackAugmenter.POTION_ID);
@@ -36,7 +35,6 @@ public class CrossoverAddons {
         WidePotionsMod.whitelistComplexPotion(MiraculousMedley.POTION_ID, new WideMiraculousMedley());
 
         if (Loader.isModLoaded("CardAugments")) {
-            BaseMod.addPotion(ChimericCompound.class, ChimericCompound.liquid, ChimericCompound.hybrid, ChimericCompound.spots, ChimericCompound.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(ChimericCompound.POTION_ID);
         }
     }

@@ -201,7 +201,7 @@ public class Wiz {
     public static ArrayList<AbstractPotion> getAllPotions() {
         ArrayList<AbstractPotion> potions = new ArrayList<>(Wiz.adp().potions);
         if (Loader.isModLoaded("widepotions")) {
-            potions.addAll(CrossoverAddons.getWidePotions());
+            potions.addAll(WidePotionLoader.getWidePotions());
         }
         return potions;
     }
