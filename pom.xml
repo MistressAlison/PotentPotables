@@ -4,7 +4,7 @@
     <groupId>PotentPotables</groupId>
 
     <artifactId>PotentPotables</artifactId>
-    <version>0.1.5</version>
+    <version>0.1.6</version>
     <name>Potent Potables</name>
     <description>Adds Potables which are Potent.</description>
     <!-- Change the above for mod information. -->
@@ -20,7 +20,7 @@
         <!-- CHANGE THIS TO MATCH YOUR MODID FIELD IN THE MAIN TodoMod CLASS FILE -->
 
         <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
-        <Steam.path>E:\SteamLibrary\steamapps/</Steam.path>
+        <Steam.path>C:\Program Files (x86)\Steam\steamapps/</Steam.path>
 
     </properties>
 
