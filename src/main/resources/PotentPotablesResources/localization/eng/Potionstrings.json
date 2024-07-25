@@ -114,7 +114,7 @@
   "${ModID}:ProlificPotion": {
     "NAME": "Prolific Potion",
     "DESCRIPTIONS": ["Choose a card in your hand. Add #b"," copy of that card into your hand."," copies of that card into your hand."," NL While held, add a copy of this potion to the rewards at the end of each combat.",
-      "Choose a card to copy."]
+      "Copy"]
   },
   "widepotions:${ModID}:ProlificPotion": {
     "NAME": "Plentiful Prolific Potion"
