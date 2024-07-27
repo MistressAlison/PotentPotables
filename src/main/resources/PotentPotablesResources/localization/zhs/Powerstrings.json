@@ -1,0 +1,39 @@
+{
+  "${ModID}:DopingPower": {
+    "NAME": "倦怠",
+    "DESCRIPTIONS": [
+      "回合结束时，失去 #b"," 点 #y力量 。"
+    ]
+  },
+  "${ModID}:ShinobiProwessPower": {
+    "NAME": "忍者之能",
+    "DESCRIPTIONS": [
+      "每打出 #b"," 张 #y技能牌 ，获得 #b"," #y敏捷 。"
+    ]
+  },
+  "${ModID}:WitchPower": {
+    "NAME": "巫女祝言",
+    "DESCRIPTIONS": [
+      "本回合内，造成未被格挡的攻击伤害时，施加 #b1 层 #y虚弱 。",
+      "下 #b"," 回合内，造成未被格挡的攻击伤害时，施加 #b1 层 #y虚弱 。"
+    ]
+  },
+  "${ModID}:BallisticPower": {
+    "NAME": "弹道学",
+    "DESCRIPTIONS": [
+      "你的下次攻击造成额外 #b","% 伤害并无视 #y格挡 。"
+    ]
+  },
+  "${ModID}:PotencyPower": {
+    "NAME": "调和",
+    "DESCRIPTIONS": [
+      "本场战斗内，你的药水效果增加 #b","% 。"
+    ]
+  },
+  "${ModID}:BanefulPower": {
+    "NAME": "陷厄",
+    "DESCRIPTIONS": [
+      "目标身上每有一种负面效果，攻击造成额外 #b"," 点伤害。"
+    ]
+  }
+}

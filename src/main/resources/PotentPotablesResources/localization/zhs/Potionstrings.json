@@ -1,0 +1,157 @@
+{
+  "${ModID}:Example": {
+    "NAME": "",
+    "DESCRIPTIONS": [""]
+  },
+  "widepotions:${ModID}:Example": {
+    "NAME": ""
+  },
+  "${ModID}:AttackAugmenter": {
+    "NAME": "猛攻特饮",
+    "DESCRIPTIONS": ["在本场战斗内，将你当前手牌中的 #y攻击牌 伤害提高 #b"," 点。"]
+  },
+  "widepotions:${ModID}:AttackAugmenter": {
+    "NAME": "威装猛攻特饮"
+  },
+  "${ModID}:BallisticBrew": {
+    "NAME": "弹道学酵饮",
+    "DESCRIPTIONS": ["你的下次 #y攻击 造成额外 #b","% 的伤害，并无视 #y格挡 。"]
+  },
+  "widepotions:${ModID}:BallisticBrew": {
+    "NAME": "满足装弹道学气酵饮"
+  },
+  "${ModID}:BanefulBlend": {
+    "NAME": "灾厄鸡尾酒",
+    "DESCRIPTIONS": ["本场战斗内，你 #y攻击 的目标身上每有一种负面效果，该次攻击额外造成 #b"," 点伤害。"]
+  },
+  "widepotions:${ModID}:BanefulBlend": {
+    "NAME": "野蛮灾厄鸡尾酒"
+  },
+  "${ModID}:BlockBooster": {
+    "NAME": "坚守特饮",
+    "DESCRIPTIONS": ["在本场战斗内，将你手牌中给予 #y格挡 的 #y技能牌 的 #y格挡值 提高 #b"," 点。"]
+  },
+  "widepotions:${ModID}:BlockBooster": {
+    "NAME": "无畏坚守特饮"
+  },
+  "${ModID}:ChimericCompound": {
+    "NAME": "奇美拉腺液",
+    "DESCRIPTIONS": ["向你的每张手牌添加一条随机 #y修改 。","向你的每张手牌添加 #b"," 条随机 #y修改 。"]
+  },
+  "widepotions:${ModID}:ChimericCompound": {
+    "NAME": "精粹奇美拉腺液"
+  },
+  "${ModID}:DopingDraught": {
+    "NAME": "类固醇生啤",
+    "DESCRIPTIONS": ["获得 #b"," 点 #y力量 。 在你的每个回合结束时，失去 #b"," 点 #y力量 。"]
+  },
+  "widepotions:${ModID}:DopingDraught": {
+    "NAME": "群勃龙生啤"
+  },
+  "${ModID}:ExoticElixir": {
+    "NAME": "异域灵药",
+    "DESCRIPTIONS": ["#y消耗 你牌组中所有的 #y状态牌 和 #y诅咒牌 。每消耗一张，回复 #b"," 点生命值。"]
+  },
+  "widepotions:${ModID}:ExoticElixir": {
+    "NAME": "上品异域灵药"
+  },
+  "${ModID}:InfernalInfusion": {
+    "NAME": "恶魔针剂",
+    "DESCRIPTIONS": ["本回合内 #y攻击牌 造成双倍伤害。","#b"," 回合内， #y攻击牌 造成双倍伤害。"]
+  },
+  "widepotions:${ModID}:InfernalInfusion": {
+    "NAME": "超量恶魔针剂"
+  },
+  "${ModID}:LivelyLiquor": {
+    "NAME": "焕灵醪",
+    "DESCRIPTIONS": ["本场战斗内，将手牌中随机 #b"," 张牌的耗能减少 #b1 。"]
+  },
+  "widepotions:${ModID}:LivelyLiquor": {
+    "NAME": "坛装焕灵醪"
+  },
+  "${ModID}:MagicManipulator": {
+    "NAME": "魔药利口酒",
+    "DESCRIPTIONS": ["在本场战斗内，药水的效能提高 #b","% 。"]
+  },
+  "widepotions:${ModID}:MagicManipulator": {
+    "NAME": "豪华装魔药利口酒"
+  },
+  "${ModID}:MarvelousMilk": {
+    "NAME": "臻品鲜奶",
+    "DESCRIPTIONS": ["获得 #b"," 点 #y敏捷 。 NL 你每打出 #b"," 张 #y技能牌 ，获得 #b"," 点 #y敏捷 。"]
+  },
+  "widepotions:${ModID}:MarvelousMilk": {
+    "NAME": "桶装臻品鲜奶"
+  },
+  "${ModID}:MetallicMixture": {
+    "NAME": "液金混合物",
+    "DESCRIPTIONS": ["阻止你下次受到的生命值伤害。","阻挡你下 #b"," 次受到的生命值伤害。"," NL 在药水栏中，每当你失去生命值时，少失去 #b"," 点。"]
+  },
+  "widepotions:${ModID}:MetallicMixture": {
+    "NAME": "大师级液金混合物"
+  },
+  "${ModID}:MiraculousMedley": {
+    "NAME": "奇迹协奏曲",
+    "DESCRIPTIONS": ["获得 #b"," #y能量. NL 在药水栏中，每场战斗开始时，将 #b"," 张 #y奇迹 加入你的手牌."," 张 #y奇迹 加入你的手牌"]
+  },
+  "widepotions:${ModID}:MiraculousMedley": {
+    "NAME": "激昂奇迹协奏曲"
+  },
+  "${ModID}:PatientPiggybank": {
+    "NAME": "弥达斯之触",
+    "DESCRIPTIONS": ["获得 #b"," #y金币。 NL 在药水栏中，每场战斗结束时，获得的 #y金币 增加 #b"," 。"]
+  },
+  "widepotions:${ModID}:PatientPiggybank": {
+    "NAME": "弥达斯之恶咒"
+  },
+  "${ModID}:PoisedPerfume": {
+    "NAME": "架势香水",
+    "DESCRIPTIONS": ["获得 #b"," 点 #y临时力量 。 NL 在药水栏中，每场战斗开始时，获得 #b"," 点 #y临时力量 。"]
+  },
+  "widepotions:${ModID}:PoisedPerfume": {
+    "NAME": "强力架势香水"
+  },
+  "${ModID}:ProlificPotion": {
+    "NAME": "丰饶药剂",
+    "DESCRIPTIONS": ["选择一张手牌，将 #b"," 张该牌的复制加入你的手牌。"," 张该牌的复制加入你的手牌。"," NL 在药水栏中时，每场战斗的奖励中添加一瓶本药水。",
+      "复制"]
+  },
+  "widepotions:${ModID}:ProlificPotion": {
+    "NAME": "丰饶香精"
+  },
+  "${ModID}:SanativeSolution": {
+    "NAME": "圣愈制剂",
+    "DESCRIPTIONS": ["回复 #b"," 点生命值。 NL 在药水栏中，每场战斗开始时，回复 #b"," 点生命值。"]
+  },
+  "widepotions:${ModID}:SanativeSolution": {
+    "NAME": "卓越圣愈制剂"
+  },
+  "${ModID}:SpeedySpirit": {
+    "NAME": "迅捷灵药",
+    "DESCRIPTIONS": ["抽 #b"," 张牌。 下回合开始时，额外抽 #b"," 张牌。"]
+  },
+  "widepotions:${ModID}:SpeedySpirit": {
+    "NAME": "迅影灵药"
+  },
+  "${ModID}:TenaciousTea": {
+    "NAME": "强韧茶饮",
+    "DESCRIPTIONS": ["获得 #b"," #y格挡。 NL 在药水栏中，每场战斗开始时，获得 #b"," #y格挡。"]
+  },
+  "widepotions:${ModID}:TenaciousTea": {
+    "NAME": "不动如山茶饮"
+  },
+  "${ModID}:WitchWater": {
+    "NAME": "巫婆之水",
+    "DESCRIPTIONS": ["本回合内，每当你造成未被格挡的 #y攻击 伤害，施加 #b1 层 #y虚弱 。","在 #b"," 回合内，每当你造成未被格挡的 #y攻击 伤害，施加 #b1 层 #y虚弱 。"]
+  },
+  "widepotions:${ModID}:WitchWater": {
+    "NAME": "巫婆咒言之水"
+  },
+  "${ModID}:VolcanicVapors": {
+    "NAME": "火山蒸汽",
+    "DESCRIPTIONS": ["对所有敌人造成 #b"," 点伤害。 NL 在药水栏中，每场战斗开始时，对所有敌人造成 #b"," 点伤害。"]
+  },
+  "widepotions:${ModID}:VolcanicVapors": {
+    "NAME": "炽烈火山蒸汽"
+  }
+}
